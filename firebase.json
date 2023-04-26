@@ -1,0 +1,10 @@
+{
+  "hosting": {
+    "public": "dist/periodico-isabella",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ]
+  }
+}

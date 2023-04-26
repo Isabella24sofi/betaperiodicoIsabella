@@ -8,6 +8,10 @@ import { NoticiaComponent } from './noticia/noticia.component';
 import { NosotrosComponent } from './nosotros/nosotros.component';
 import { AppRoutingModule } from './app-routing.module';
 import { ContactanosComponent } from './contactanos/contactanos.component';
+import { AngularFireStorageModule } from '@angular/fire/compat/storage';
+import { AngularFirestoreModule } from '@angular/fire/compat/firestore';
+import { AngularFireModule } from '@angular/fire/compat';
+import { enviroment } from 'src/enviroments/enviroments';
 
 @NgModule({
   declarations: [
@@ -20,7 +24,11 @@ import { ContactanosComponent } from './contactanos/contactanos.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    AngularFirestoreModule,
+    AngularFireModule.inializeApp(enviroment.firebaseConfig),
+    AngularFireStorageModule
+  
   ],
   providers: [],
   bootstrap: [AppComponent]
